@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "default": {
+            "matchCondition": {
+                "route": "/",
+                "methods": [
+                    "GET",
+                    "OPTIONS"
+                ]
+            },
+            "backendUri": "https://%BlobHost%/content/index.html"
+        },
+        "js": {
+            "matchCondition": {
+                "route": "/static/js/{*rest}",
+                "methods": [
+                    "GET",
+                    "OPTIONS"
+                ]
+            },
+            "backendUri": "https://%BlobHost%/content/static/js/{rest}"
+        },
+        "media": {
+            "matchCondition": {
+                "route": "/static/media/{*rest}",
+                "methods": [
+                    "GET",
+                    "OPTIONS"
+                ]
+            },
+            "backendUri": "https://%BlobHost%/content/static/media/{rest}"
+        },
+        "css": {
+            "matchCondition": {
+                "route": "/static/css/{*rest}",
+                "methods": [
+                    "GET",
+                    "OPTIONS"
+                ]
+            },
+            "backendUri": "https://%BlobHost%/content/static/css/{rest}"
+        },
+        "json": {
+            "matchCondition": {
+                "route": "/{*json}.json",
+                "methods": [
+                    "GET",
+                    "OPTIONS"
+                ]
+            },
+            "backendUri": "https://%BlobHost%/content/{json}"
+        },
+        "service_worker": {
+            "matchCondition": {
+                "route": "/service-worker.js",
+                "methods": [
+                    "GET",
+                    "OPTIONS"
+                ]
+            },
+            "backendUri": "https://%BlobHost%/content/service-worker.js"
+        },
+        "favicon": {
+            "matchCondition": {
+                "route": "/favicon.ico",
+                "methods": [
+                    "GET",
+                    "OPTIONS"
+                ]
+            },
+            "backendUri": "https://%BlobHost%/content/favicon.ico"
+        },
+        "Loading": {
+            "matchCondition": {
+                "route": "/loading.gif",
+                "methods": [
+                    "GET",
+                    "OPTIONS"
+                ]
+            },
+            "backendUri": "https://%BlobHost%/content/loading.gif"
+        }
+    }
+}

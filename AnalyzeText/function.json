@@ -1,0 +1,24 @@
+{
+    "bindings": [
+        {
+            "authLevel": "anonymous",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "req",
+            "route": "analyzetext"
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "res"
+        },
+        {
+            "type": "queue",
+            "name": "$return",
+            "queueName": "analyzetweets",
+            "connection": "aamt_STORAGE",
+            "direction": "out"
+        }
+    ],
+    "disabled": false
+}

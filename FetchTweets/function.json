@@ -1,0 +1,28 @@
+{
+    "bindings": [
+        {
+            "authLevel": "anonymous",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "req",
+            "route": "fetchtweets",
+            "methods": [
+                "get",
+                "options"
+            ]
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "res"
+        },
+        {
+            "type": "queue",
+            "name": "$return",
+            "queueName": "fetchtweets",
+            "connection": "aamt_STORAGE",
+            "direction": "out"
+        }
+    ],
+    "disabled": false
+}
