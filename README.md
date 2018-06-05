@@ -28,6 +28,8 @@ Optionally, you can use [Visual Studio Team Services](https://www.visualstudio.c
 
 ## Setup
 
+You'll need to provide anything labled as a bash variable (i.e. ```$REGION``` or ```$RESOURCE_GROUP_FUNC```)
+
 1. Create Resource Group
 ```
 az group create \
@@ -123,7 +125,7 @@ az cognitiveservices account create \
     You can use [continuous deployment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment) from a repository, however I just used [zip deployment](https://docs.microsoft.com/en-us/azure/azure-functions/deployment-zip-push) and the CLI for iterating.
 ```
 az functionapp deployment source config-zip\
-    -g myResourceGroup \
+    -g "$RESOURCE_GROUP_FUNC" \
     -n "$FUNCTION_NAME" \
     --src <zip_file_path>
 ```
