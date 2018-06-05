@@ -119,6 +119,7 @@ az cognitiveservices account create \
    Follow the [directions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node#node-version-and-package-management) to upload the ```package.json``` file to the ```wwwroot``` directory in the functions app service and run ```npm install``` so that the JavaScript functions have access to the ```async``` and ```request``` packages.
 
 8. Deploy Function App
+
     You can use [continuous deployment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment) from a repository, however I just used [zip deployment](https://docs.microsoft.com/en-us/azure/azure-functions/deployment-zip-push) and the CLI for iterating.
 ```
 az functionapp deployment source config-zip\
