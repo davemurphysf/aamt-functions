@@ -17,6 +17,14 @@ The Azure services used are:
 The [SPA](https://github.com/davemurphysf/aamt-spa) uses [React](https://reactjs.org) & [Redux](https://redux.js.org/), and was created with [Create React App](https://github.com/facebook/create-react-app).  The [Functions](https://github.com/davemurphysf/aamt-functions) use a mixture of JavaScript and C#.
 
 Optionally, you can use [Visual Studio Team Services](https://www.visualstudio.com/team-services/) for CI/CD from a GitHub or Bitbucket repository for free.
+#### Demo Flow
+1. Initial request returns SPA from Blob Storage via Functions proxy
+2. During the first SPA setup, a request is made to the ```Signin``` function that returns the SignalR connection details and the current stats
+3. The user enters a Twitter handle to fetch their recent tweets
+   * The return of the ```Fetch Tweets``` function triggers a message to be put on the ```Fetch Queue```.
+4. The user clicks buttons to analyze any tweet text or embedded images
+   * The return of the ```Analyze Text``` or ```Analyze Image``` function triggers a message to be put on the ```Analyze Queue```.
+5. Triggered by the Queue messages, the ```Update Fetch Stats``` function adds an entry to the ```Fetch Table``` and sends the updated stats to ```SignalR``` which broadcasts them to all clients.  Similarly, the ```Update Analyze Stats``` function adds an entry to the ```Analyze Table``` and sends the updated stats to ```SignalR``` which broadcasts them to all clients.
 
 ## Setup
 
