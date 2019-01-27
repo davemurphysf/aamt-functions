@@ -1,6 +1,6 @@
 # Azure Analyze My Tweets
 
-[Live Demo](https://aamt-func.azurewebsites.net/)
+[Live Demo](https://aamt.app/)
 
 ## Architecture
 ![alt text](https://github.com/davemurphysf/aamt-spa/raw/master/aamt-diagram.png "aamt diagram")
