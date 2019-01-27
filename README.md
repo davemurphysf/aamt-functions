@@ -16,7 +16,7 @@ The Azure services used are:
 
 The [SPA](https://github.com/davemurphysf/aamt-spa) uses [React](https://reactjs.org) & [Redux](https://redux.js.org/), and was created with [Create React App](https://github.com/facebook/create-react-app).  The [Functions](https://github.com/davemurphysf/aamt-functions) use a mixture of JavaScript and C#.
 
-Optionally, you can use [Visual Studio Team Services](https://www.visualstudio.com/team-services/) for CI/CD from a GitHub or Bitbucket repository for free.
+Optionally, you can use [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) for CI/CD from a GitHub or Bitbucket repository for free.
 #### Demo Flow
 1. Initial request returns SPA from Blob Storage via Functions proxy
 2. During the first SPA setup, a request is made to the ```Signin``` function that returns the SignalR connection details and the current stats
