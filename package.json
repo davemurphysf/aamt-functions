@@ -1,9 +1,9 @@
 {
     "name": "aamt-functions",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "private": true,
     "dependencies": {
-        "request": "2.87.0",
-        "async": "2.6.1"
+        "request": "2.88.0",
+        "async": "3.1.0"
     }
 }
